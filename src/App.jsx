@@ -14,16 +14,16 @@ function App() {
 
 	return (
     <div className="min-h-screen bg-black text-white">
-      <header className="p-6 max-w-xl mx-auto text-center">
+      <header className="p-6 max-w-xl mx-auto text-center h-96 relative"> {/* Added relative positioning */}
         <video
           src={headerVideo}
           autoPlay
           muted
-          className="mx-auto mb-4 rounded shadow"
+          className="mx-auto mb-4 rounded shadow z-0" // Set z-index to 0
           style={{ width: '500px', height: '500px' }}
         />
       </header>
-      <main className="p-6 max-w-3xl mx-auto font-sans">
+      <main className="p-6 max-w-3xl mx-auto font-sans relative z-10"> {/* Added z-10 to ensure it appears above */}
         <div className="mb-4">
           <button
             onClick={() => setShowIntro(true)}
